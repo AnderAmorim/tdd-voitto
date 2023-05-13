@@ -1,3 +1,3 @@
-const Highlight = () => <div>3000</div>;
+const Highlight = ({ value }) => <div>{value}</div>;
 
 export default Highlight;
