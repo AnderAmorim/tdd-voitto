@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "jest": "^29.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-testing-library": "^8.0.1"
+  },
+  "name": "m2-desafio-tech",
+  "version": "1.0.0",
+  "main": "App.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

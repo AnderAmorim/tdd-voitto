@@ -1,0 +1,82 @@
+Desafio 1 - Testando exceções e Falsos positivos:
+
+javascript
+Copy code
+function dividirNumeros(a, b) {
+  if (b === 0) {
+    throw new Error("Divisão por zero não é permitida!");
+  }
+  return a / b;
+}
+
+module.exports = dividirNumeros;
+Desafio 2 - Primeiros testes unitários no React e Simplificando testes com Testing Library:
+
+Primeiro, instale as dependências necessárias:
+
+Copy code
+npm install react react-dom react-testing-library jest
+Em seguida, crie um arquivo de teste chamado contador.test.js e adicione o seguinte código:
+
+javascript
+Copy code
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react';
+import Contador from './Contador';
+
+test('renderiza o componente Contador corretamente', () => {
+  const { getByText } = render(<Contador />);
+  const valor = getByText(/Valor:/);
+  const botaoIncrementar = getByText('+');
+  const botaoDecrementar = getByText('-');
+
+  expect(valor).toBeInTheDocument();
+  expect(botaoIncrementar).toBeInTheDocument();
+  expect(botaoDecrementar).toBeInTheDocument();
+});
+
+test('incrementa o valor corretamente ao clicar no botão de incremento', () => {
+  const { getByText } = render(<Contador />);
+  const valor = getByText(/Valor:/);
+  const botaoIncrementar = getByText('+');
+
+  fireEvent.click(botaoIncrementar);
+
+  expect(valor.textContent).toBe('Valor: 1');
+});
+
+test('decrementa o valor corretamente ao clicar no botão de decremento', () => {
+  const { getByText } = render(<Contador />);
+  const valor = getByText(/Valor:/);
+  const botaoDecrementar = getByText('-');
+
+  fireEvent.click(botaoDecrementar);
+
+  expect(valor.textContent).toBe('Valor: -1');
+});
+
+test('o valor nunca fica negativo', () => {
+  const { getByText } = render(<Contador />);
+  const valor = getByText(/Valor:/);
+  const botaoDecrementar = getByText('-');
+
+  fireEvent.click(botaoDecrementar);
+  fireEvent.click(botaoDecrementar);
+
+  expect(valor.textContent).toBe('Valor: 0');
+});
+Desafio 3 - Criando Visual Tests - snapshots:
+
+Adicione o seguinte teste de snapshot ao arquivo contador.test.js:
+
+javascript
+Copy code
+test('snapshot do componente Contador', () => {
+  const { container } = render(<Contador />);
+  expect(container.firstChild).toMatchSnapshot();
+});
+Certifique-se de ter instalado as dependências necessárias e execute os testes utilizando o Jest:
+
+bash
+Copy code
+npm test
