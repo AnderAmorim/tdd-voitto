@@ -1,11 +1,12 @@
 //app.js
-const index = require('./index');
+const index = require('./desconto');
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.use(express.json());
 app.get('/', (req, res) => res.json({ message: 'Funcionando!' }));
+
 
 // GET /aplicarDesconto
 app.get('/aplicarDesconto/:valor/:desconto', (req, res) => {
@@ -15,7 +16,6 @@ app.get('/aplicarDesconto/:valor/:desconto', (req, res) => {
 })
 
 if (require.main === module) {
-    //inicia o servidor
     app.listen(port);
     console.log('API funcionando!');
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import Link from '../Link.react';
 import renderer from 'react-test-renderer';
+import Link from './Link';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <Link page="http://www.facebook.com">Facebook</Link>
+    <Link page="http://www.facebook.com">Facebookk</Link>
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

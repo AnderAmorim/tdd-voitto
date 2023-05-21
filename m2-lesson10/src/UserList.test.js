@@ -1,7 +1,7 @@
 import React from 'react';
 import UserList from './UserList';
+//Vai permitir que possamos testar um componente especifico, no caso o UserList
 import { shallow } from 'enzyme';
-
 it("should render the user list", () => {
   const app = shallow(<UserList />)
   app.instance().setState({data: <li>teste</li>});
@@ -10,10 +10,10 @@ it("should render the user list", () => {
   expect(app.find('li')).toHaveLength(1)
 })
 
-it("should render the user list using mocks", () => {
+it("should render the user list using mocks", async () => {
   const app = shallow(<UserList />)
   app.instance().getUsersFromApi = jest.fn();
-  app.instance().getUsersFromApi.mockReturnValue([{
+  app.instance().getUsersFromApi.mockResolvedValue([{
     "id": 1,
     "name": "Leanne Graham",
     "username": "Bret",
@@ -36,6 +36,8 @@ it("should render the user list using mocks", () => {
       "bs": "harness real-time e-markets"
     }
   }])
+  await app.instance().getUsers();
+
   app.instance().forceUpdate();
   // Checking output
   expect(app.find('li')).toHaveLength(1)

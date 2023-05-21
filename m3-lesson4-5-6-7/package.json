@@ -1,5 +1,5 @@
 {
-  "name": "react-com-tdd-na-pratica",
+  "name": "tdd-com-react",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,17 +8,9 @@
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/felipecesr/react-com-tdd-na-pratica.git"
-  },
   "keywords": [],
   "author": "Felipe Cesar <felipecesr@gmail.com>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/felipecesr/react-com-tdd-na-pratica/issues"
-  },
-  "homepage": "https://github.com/felipecesr/react-com-tdd-na-pratica#readme",
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.14.5",
     "@babel/preset-env": "^7.14.7",

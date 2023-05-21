@@ -12,7 +12,6 @@ class UserList extends React.Component {
     }
     getUsers(){
         this.getUsersFromApi()
-        .then(res => res.json())
         .then(
             (result) => {
                 this.setState({data:(result.map((user) =>
@@ -22,7 +21,7 @@ class UserList extends React.Component {
                 ))});
             },
             (error) => {
-                console.log("Ocorreu um erro");
+                console.log("Ocorreu um erro", error);
             }
         )
     }
