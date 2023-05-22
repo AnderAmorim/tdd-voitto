@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1684627918224" clover="3.2.0">
-  <project timestamp="1684627918224" name="All files">
+<coverage generated="1684681392818" clover="3.2.0">
+  <project timestamp="1684681392818" name="All files">
     <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2" elements="15" coveredelements="15" complexity="0" loc="11" ncloc="11" packages="1" files="1" classes="1"/>
     <file name="index.js" path="/Users/anderson.amorim.s/Documents/tdd-voitto/m2-lesson7/index.js">
       <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>

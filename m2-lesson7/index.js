@@ -1,11 +1,11 @@
-function concatenaNome(nome, sobrenome) {
-  return `${nome} ${sobrenome}`;
+function concatenaEndereco(cidade, estado) {
+  return `${cidade} - ${estado}`;
 }
 
-function dadosUsuario(nome, sobrenome, idade) {
-  const nomeCompleto = concatenaNome(nome, sobrenome);
-  const fraseApresentacao = `Meu nome é ${nomeCompleto} e eu tenho ${idade} anos`
+function enderecoCompleto(cidade, estado) {
+  const enderecoFinal = concatenaEndereco(cidade, estado);
+  const fraseApresentacao = `Eu moro em ${enderecoFinal}`
   return fraseApresentacao;
 }
 
-module.exports = dadosUsuario;
+module.exports = enderecoCompleto;

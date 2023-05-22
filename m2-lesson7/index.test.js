@@ -1,10 +1,10 @@
 
 
-const dadosUsuario = require('./index');
+const enderecoCompleto = require('./index');
 
 describe('Testes da aplicação', () => {
   test('Deve retornar a concatenação de duas strings', () => {
-    const resultado = dadosUsuario('Anderson', 'Amorim', 23);
-    expect(resultado).toBe('Meu nome é Anderson Amorim e eu tenho 23 anos');
+    const resultado = enderecoCompleto('Juiz de Fora', 'MG');
+    expect(resultado).toBe(`Eu moro em Juiz de Fora - MG`);
   });
 });
