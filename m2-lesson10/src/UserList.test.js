@@ -1,6 +1,19 @@
 import React from 'react';
 import UserList from './UserList';
 //Vai permitir que possamos testar um componente especifico, no caso o UserList
+
+// A função shallow do enzyme permite renderizar um componente React de 
+// forma "rasa" ou "superficial". Isso significa que, ao usar o shallow, 
+// o componente renderizado não será renderizado completamente com todos os 
+// seus componentes filhos, mas apenas o componente em si.
+
+
+
+npm install -g create-react-app
+create-react-app react-testing
+cd react-testing
+npm install -S prop-types
+
 import { shallow } from 'enzyme';
 it("should render the user list", () => {
   const app = shallow(<UserList />)

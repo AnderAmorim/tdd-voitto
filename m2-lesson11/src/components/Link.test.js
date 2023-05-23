@@ -4,7 +4,7 @@ import Link from './Link';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <Link page="http://www.facebook.com">Facebookk</Link>
+    <Link page="http://www.facebook.com">Facebook</Link>
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });
