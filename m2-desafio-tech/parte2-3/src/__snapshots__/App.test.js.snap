@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot do componente Contador 1`] = `
+<div>
+  <p>
+    Valor: 
+    0
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Incrementar
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Decrementar
+  </button>
+</div>
+`;
