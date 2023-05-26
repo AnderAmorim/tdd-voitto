@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Verificamdo conteúdo de Link.js 1`] = `
+<a
+  className="normal"
+  href="http://www.facebook.com.br"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Facebookkkkk
+</a>
+`;
